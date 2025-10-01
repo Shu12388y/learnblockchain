@@ -4,7 +4,7 @@
 
 fn main() {
     let str:&str = "hello world";
-    let string: String = String::from("Hello wordl");
+    let string: String = String::from("Hello world");
 
 
     println!("Hello, world!");
