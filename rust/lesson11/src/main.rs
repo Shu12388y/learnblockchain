@@ -40,18 +40,43 @@ Rules of borrowing
 
 
 /*
-        Immutable Reference
-
+    Immutable Reference
 
     fn main(){
         let s1 = String::from("Shubham");
         let s2 = &s1;
         let s3 = &s1;
-        println!("{} {}",s1,s2,s3);
+        println!("{} {}",s1,s2,s3); --> No Issue 
 
-        No Issue 
+        In this if s2 try to change the value of then s4 which give error
+        we can't change the immutable references
 
-    
+        for that we can have only one immutable reference that can change the value
+        for that we have use
+        let s2 = &mut s1; ---> Now s2 can change the value of s1
+
+
+
+        example 2:
+            fn main(){
+            
+                let mut name = String::from("Shubham");
+                let ref1 = &mut name;
+                ref1.push_str("paul");
+-------------------------------------------------------
+                let ref2 = &name;
+                println!("{}",ref2);
+
+                This will work as the life span of the ref1 getting ended 
+                as we are not using in the below line of code and 
+                ref2 will point to name and as ref1 is not changing this value and 
+                this will not give the error
+                So, this code will work
+            
+            
+            
+            }   
+        
     
     
     }
