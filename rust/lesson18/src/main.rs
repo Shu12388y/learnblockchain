@@ -1,3 +1,8 @@
+// Cargo 
+
+use chrono::prelude::*;
+
 fn main() {
-    println!("Hello, world!");
+    let utc = Utc::now();
+    println!("{}",utc);
 }
