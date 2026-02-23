@@ -41,3 +41,33 @@ container/healing them /listening to the developer understand what to deploy
 
 1. Create cluster
 kind create cluster --name cluster-name
+
+
+2. Get nodes
+kubectl get nodes
+
+3. Delete Cluster
+kind delete cluster -n cluster-name
+
+4. Run multiple cluster
+kind create cluster --config cluster.yml --name cluster-name
+
+5. Create pod
+kubectl run pod-name --image=nginx --port=80
+
+6. Get pods
+kubectl get pods
+
+7. check logs
+kubectl logs pod-name
+ or kubectl logs -f pod-name
+
+8. Decribe pods
+kubectl describe pod pod-name 
+
+9. Delete pods
+kubectl delete pod pod-name
+
+10. Run mainfest file
+kubectl apply -f mainfest.yml
+
